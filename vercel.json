@@ -1,14 +1,8 @@
 {
   "redirects": [
     {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "yp.dolakrishnan.dev"
-        }
-      ],
-      "destination": "https://dolakrishnan.dev/yourplayer",
+      "source": "/yourplayer",
+      "destination": "https://yourplayer.dolakrishnan.dev",
       "permanent": true
     }
   ]
