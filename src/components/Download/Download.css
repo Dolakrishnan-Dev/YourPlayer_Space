@@ -1,0 +1,47 @@
+#download {
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(245,166,35,0.07) 0%, transparent 70%),
+              var(--surface);
+  text-align: center; padding: 140px 60px;
+  position: relative;
+}
+#download::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(245,166,35,0.3), transparent);
+}
+
+.download-inner { max-width: 700px; margin: 0 auto; }
+
+.download-icon {
+  width: 90px; height: 90px; margin: 0 auto 32px;
+  background: linear-gradient(135deg, #1a1a00, var(--gold-dim));
+  border: 1px solid rgba(245,166,35,0.3); border-radius: 26px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 40px;
+  box-shadow: 0 0 40px rgba(245,166,35,0.15);
+}
+
+.download-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 16px;
+}
+.download-sub { color: var(--muted); font-size: 17px; line-height: 1.6; margin-bottom: 40px; }
+
+.download-btn {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: var(--gold); color: var(--black);
+  padding: 18px 40px; border-radius: 50px;
+  font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 32px rgba(245,166,35,0.3);
+}
+.download-btn svg { width: 22px; height: 22px; }
+.download-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 48px rgba(245,166,35,0.45); }
+
+.download-note { font-size: 12px; color: var(--muted); margin-top: 16px; letter-spacing: 0.5px; }
+
+@media (max-width: 900px) {
+  #download { padding: 80px 24px; }
+  .download-title { font-size: 38px; }
+}

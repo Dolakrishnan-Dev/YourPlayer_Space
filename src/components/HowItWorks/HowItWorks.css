@@ -1,0 +1,37 @@
+#how { background: var(--surface); position: relative; }
+#how::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(245,166,35,0.3), transparent);
+}
+
+.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 64px; }
+
+.step-card { position: relative; padding: 40px; }
+
+.step-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px; font-weight: 900; line-height: 1;
+  color: rgba(245,166,35,0.08); position: absolute; top: 16px; right: 20px;
+  pointer-events: none; user-select: none;
+}
+
+.step-dot {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--gold-dim); border: 1px solid rgba(245,166,35,0.3);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px; font-size: 16px;
+}
+
+.step-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+.step-desc { color: var(--muted); font-size: 14px; line-height: 1.7; }
+
+.step-connector {
+  position: absolute; top: 60px; right: -20px;
+  width: 40px; height: 1px;
+  background: linear-gradient(to right, rgba(245,166,35,0.3), transparent);
+}
+
+@media (max-width: 900px) {
+  .steps-grid { grid-template-columns: 1fr; }
+}
